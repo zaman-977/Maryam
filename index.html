@@ -1,0 +1,1636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
+<meta name="theme-color" content="#c51b72">
+<title>Maryam's Pink Luxury 🌸</title>
+
+<style>
+:root{
+ --pink:#ff4f9a;
+ --pink2:#d71970;
+ --rose:#ff9fca;
+ --deep:#12050d;
+ --card:rgba(255,255,255,.075);
+ --line:rgba(255,170,210,.22);
+ --text:#fff;
+ --muted:#d9b7c9;
+ --gold:#ffd477;
+}
+
+*{box-sizing:border-box}
+
+html{scroll-behavior:smooth}
+
+body{
+ margin:0;
+ min-height:100vh;
+ color:var(--text);
+ font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+ background:
+ radial-gradient(circle at 10% 5%,#ff4f9a35 0 10%,transparent 32%),
+ radial-gradient(circle at 95% 15%,#ffb0d42b 0 8%,transparent 30%),
+ radial-gradient(circle at 50% 100%,#8e164d22,transparent 35%),
+ linear-gradient(135deg,#10040b,#26091a 45%,#0d0309);
+ overflow-x:hidden;
+}
+
+body::before{
+ content:"";
+ position:fixed;
+ inset:0;
+ pointer-events:none;
+ background-image:
+ radial-gradient(#fff6 1px,transparent 1px),
+ radial-gradient(#ff9dcb55 1px,transparent 1px);
+ background-size:55px 55px,85px 85px;
+ background-position:0 0,30px 20px;
+ opacity:.15;
+ z-index:-1;
+}
+
+button{
+ font:inherit;
+ color:inherit;
+ cursor:pointer;
+ border:0;
+}
+
+a{text-decoration:none;color:inherit}
+
+.app{
+ width:min(1050px,94%);
+ margin:auto;
+ padding:15px 0 80px;
+}
+
+/* TOP BAR */
+
+.topbar{
+ position:sticky;
+ top:10px;
+ z-index:50;
+ display:flex;
+ justify-content:space-between;
+ align-items:center;
+ padding:10px;
+ margin-bottom:18px;
+ border:1px solid var(--line);
+ border-radius:20px;
+ background:#160611c9;
+ backdrop-filter:blur(18px);
+ box-shadow:0 15px 50px #0008;
+}
+
+.brand{
+ display:flex;
+ gap:10px;
+ align-items:center;
+ font-weight:900;
+}
+
+.brandIcon{
+ width:40px;
+ height:40px;
+ display:grid;
+ place-items:center;
+ border-radius:14px;
+ background:linear-gradient(145deg,var(--pink),var(--pink2));
+ box-shadow:0 8px 25px #ff3d8b55;
+}
+
+.controls{
+ display:flex;
+ gap:7px;
+}
+
+.iconBtn{
+ width:42px;
+ height:42px;
+ border-radius:13px;
+ background:#ffffff10;
+ border:1px solid var(--line);
+}
+
+/* HERO */
+
+.hero{
+ position:relative;
+ overflow:hidden;
+ text-align:center;
+ padding:50px 20px 35px;
+ border-radius:35px;
+ border:1px solid var(--line);
+ background:
+ linear-gradient(145deg,#ffffff0d,#ff4f9a0b),
+ #18061199;
+ backdrop-filter:blur(18px);
+ box-shadow:0 25px 80px #0009;
+}
+
+.hero::after{
+ content:"";
+ position:absolute;
+ width:240px;
+ height:240px;
+ border-radius:50%;
+ background:#ff4f9a22;
+ filter:blur(50px);
+ right:-100px;
+ top:-80px;
+}
+
+.heroFlower{
+ font-size:72px;
+ display:inline-block;
+ animation:float 3s ease-in-out infinite;
+ filter:drop-shadow(0 10px 20px #ff4f9a55);
+}
+
+.hero h1{
+ margin:4px 0;
+ font-size:clamp(38px,8vw,76px);
+ line-height:1;
+ letter-spacing:-3px;
+ background:linear-gradient(90deg,#fff,#ff9fca,#fff,#ffd5e7);
+ background-size:300%;
+ -webkit-background-clip:text;
+ background-clip:text;
+ color:transparent;
+ animation:shine 5s linear infinite;
+}
+
+.hero .tag{
+ color:#f6ccde;
+ font-size:17px;
+ margin:15px auto;
+ max-width:600px;
+ line-height:1.7;
+}
+
+.scorePill{
+ display:inline-flex;
+ align-items:center;
+ gap:8px;
+ padding:11px 18px;
+ border-radius:999px;
+ background:#ff4f9a16;
+ border:1px solid #ff9fca45;
+ box-shadow:inset 0 0 25px #ff4f9a0b;
+}
+
+.scorePill strong{
+ color:#ffd1e3;
+ font-size:20px;
+}
+
+.level{
+ margin-top:10px;
+ color:var(--gold);
+ font-size:13px;
+}
+
+.progress{
+ width:min(350px,85%);
+ height:7px;
+ background:#ffffff12;
+ border-radius:99px;
+ margin:9px auto 0;
+ overflow:hidden;
+}
+
+.progress i{
+ display:block;
+ height:100%;
+ width:0;
+ border-radius:inherit;
+ background:linear-gradient(90deg,var(--pink),#ffd1e5);
+ transition:width .5s ease;
+}
+
+/* SECTIONS */
+
+.section{
+ margin-top:27px;
+}
+
+.sectionHead{
+ display:flex;
+ justify-content:space-between;
+ align-items:end;
+ gap:10px;
+ margin-bottom:13px;
+}
+
+.sectionHead h2{
+ margin:0;
+ font-size:25px;
+}
+
+.sectionHead span{
+ color:var(--muted);
+ font-size:12px;
+}
+
+/* GAME GRID */
+
+.games{
+ display:grid;
+ grid-template-columns:repeat(4,1fr);
+ gap:12px;
+}
+
+.game{
+ position:relative;
+ min-height:155px;
+ padding:19px 14px;
+ overflow:hidden;
+ text-align:left;
+ border-radius:23px;
+ border:1px solid var(--line);
+ background:
+ linear-gradient(145deg,#ffffff0c,#ff4f9a08),
+ #180711aa;
+ box-shadow:0 13px 35px #0006;
+ transition:.25s;
+}
+
+.game::after{
+ content:"";
+ position:absolute;
+ width:100px;
+ height:100px;
+ border-radius:50%;
+ background:#ff4f9a12;
+ right:-35px;
+ bottom:-35px;
+}
+
+.game:hover{
+ transform:translateY(-6px);
+ border-color:#ff9fca77;
+ box-shadow:0 20px 50px #0008,0 0 30px #ff4f9a12;
+}
+
+.game:active{transform:scale(.97)}
+
+.gameIcon{
+ display:block;
+ font-size:39px;
+ margin-bottom:12px;
+}
+
+.gameName{
+ display:block;
+ font-weight:900;
+ font-size:16px;
+}
+
+.gameDesc{
+ display:block;
+ color:#cdb0bf;
+ font-size:11px;
+ line-height:1.5;
+ margin-top:5px;
+}
+
+/* BUTTONS */
+
+.primary{
+ padding:12px 19px;
+ border-radius:999px;
+ font-weight:800;
+ background:linear-gradient(100deg,var(--pink),var(--pink2));
+ box-shadow:0 10px 25px #ff3f8b38;
+ transition:.2s;
+}
+
+.primary:hover{transform:translateY(-2px)}
+
+.secondary{
+ padding:11px 17px;
+ border-radius:999px;
+ background:#ffffff0c;
+ border:1px solid var(--line);
+}
+
+.danger{
+ background:#ff3d5c22;
+ border:1px solid #ff6d8260;
+ padding:10px 15px;
+ border-radius:999px;
+}
+
+/* GAME PANEL */
+
+.panel{
+ display:none;
+ margin-top:18px;
+ padding:22px;
+ border-radius:27px;
+ border:1px solid var(--line);
+ background:#180711e8;
+ backdrop-filter:blur(18px);
+ box-shadow:0 25px 70px #0009;
+ animation:panelIn .35s ease;
+}
+
+.panel.active{display:block}
+
+.panelTop{
+ display:flex;
+ align-items:center;
+ justify-content:space-between;
+ gap:10px;
+ margin-bottom:16px;
+}
+
+.panel h2{margin:0;font-size:24px}
+
+.close{
+ width:38px;
+ height:38px;
+ border-radius:12px;
+ background:#ffffff0d;
+ border:1px solid var(--line);
+}
+
+/* QUIZ */
+
+.question{
+ font-size:20px;
+ font-weight:800;
+ line-height:1.6;
+ margin:15px 0;
+}
+
+.answers{
+ display:grid;
+ gap:9px;
+}
+
+.answer{
+ text-align:left;
+ padding:14px;
+ border-radius:16px;
+ background:#ffffff09;
+ border:1px solid var(--line);
+ transition:.2s;
+}
+
+.answer:hover{
+ background:#ff4f9a20;
+ transform:translateX(-3px);
+}
+
+/* WHEEL */
+
+.wheelWrap{
+ text-align:center;
+ padding:5px 0 10px;
+}
+
+.wheel{
+ width:min(270px,75vw);
+ aspect-ratio:1;
+ margin:10px auto 22px;
+ border-radius:50%;
+ position:relative;
+ display:grid;
+ place-items:center;
+ border:8px solid #ffd8e7;
+ background:
+ conic-gradient(
+ #ff4f9a 0deg 45deg,
+ #761745 45deg 90deg,
+ #ff8abc 90deg 135deg,
+ #a21c5e 135deg 180deg,
+ #ff4f9a 180deg 225deg,
+ #761745 225deg 270deg,
+ #ff8abc 270deg 315deg,
+ #a21c5e 315deg 360deg
+ );
+ box-shadow:0 0 55px #ff4f9a55;
+ transition:transform 3.4s cubic-bezier(.12,.72,.18,1);
+}
+
+.wheel::before{
+ content:"";
+ width:70px;
+ height:70px;
+ border-radius:50%;
+ background:#180711;
+ border:5px solid #ffd8e7;
+ box-shadow:0 0 25px #0008;
+}
+
+.wheel::after{
+ content:"♥";
+ position:absolute;
+ font-size:29px;
+ color:#fff;
+}
+
+.pointer{
+ width:0;
+ height:0;
+ border-left:14px solid transparent;
+ border-right:14px solid transparent;
+ border-top:32px solid #fff;
+ margin:auto;
+ filter:drop-shadow(0 5px 5px #000);
+}
+
+/* CHALLENGE */
+
+.challengeBox{
+ text-align:center;
+ padding:28px 15px;
+ border-radius:22px;
+ background:linear-gradient(145deg,#ff4f9a16,#ffffff05);
+ border:1px solid var(--line);
+}
+
+.bigEmoji{
+ font-size:55px;
+ margin-bottom:10px;
+}
+
+/* PICK ONE */
+
+.pickGrid{
+ display:grid;
+ grid-template-columns:1fr 1fr;
+ gap:12px;
+}
+
+.pick{
+ min-height:120px;
+ border-radius:22px;
+ border:1px solid var(--line);
+ background:#ffffff09;
+ font-size:23px;
+ font-weight:900;
+ transition:.2s;
+}
+
+.pick:hover{
+ transform:scale(1.03);
+ background:#ff4f9a22;
+}
+
+/* MEMORY */
+
+.memoryGrid{
+ width:min(480px,100%);
+ margin:auto;
+ display:grid;
+ grid-template-columns:repeat(4,1fr);
+ gap:10px;
+}
+
+.memoryCard{
+ aspect-ratio:1;
+ border-radius:17px;
+ background:linear-gradient(145deg,#ff4f9a18,#ffffff08);
+ border:1px solid var(--line);
+ font-size:30px;
+ transition:.2s;
+}
+
+.memoryCard.open{
+ background:#ff4f9a3b;
+ transform:rotateY(180deg);
+}
+
+.memoryCard.matched{
+ background:#ff4f9a55;
+ box-shadow:0 0 20px #ff4f9a33;
+}
+
+/* TAP */
+
+.tapArea{
+ height:280px;
+ border-radius:25px;
+ border:1px dashed #ff9fca66;
+ background:#ff4f9a0b;
+ display:grid;
+ place-items:center;
+ margin:12px 0;
+}
+
+.tap{
+ width:165px;
+ height:165px;
+ border-radius:50%;
+ background:radial-gradient(circle at 35% 30%,#ffb8d5,#ff4f9a 55%,#bd155f);
+ box-shadow:0 18px 50px #ff4f9a55;
+ font-size:26px;
+ font-weight:1000;
+ transition:.08s;
+}
+
+.tap:active{transform:scale(.9)}
+
+/* CARDS */
+
+.infoGrid{
+ display:grid;
+ grid-template-columns:repeat(3,1fr);
+ gap:12px;
+}
+
+.infoCard{
+ padding:18px;
+ border-radius:20px;
+ background:#ffffff08;
+ border:1px solid var(--line);
+}
+
+.infoIcon{font-size:32px}
+
+.infoCard h3{margin:8px 0 4px}
+
+.infoCard p{
+ margin:0;
+ color:var(--muted);
+ font-size:13px;
+ line-height:1.6;
+}
+
+/* QUOTE */
+
+.quoteBox{
+ text-align:center;
+ padding:30px 20px;
+ border-radius:25px;
+ background:
+ radial-gradient(circle,#ff4f9a18,transparent 65%),
+ #ffffff06;
+ border:1px solid var(--line);
+}
+
+.quote{
+ font-size:21px;
+ line-height:1.8;
+ color:#ffe3ef;
+ min-height:70px;
+}
+
+/* MEMORY WALL */
+
+.memoryWall{
+ display:grid;
+ grid-template-columns:repeat(3,1fr);
+ gap:10px;
+}
+
+.memoryItem{
+ min-height:100px;
+ padding:15px;
+ display:flex;
+ align-items:end;
+ border-radius:18px;
+ background:
+ linear-gradient(145deg,#ff4f9a20,#ffffff05);
+ border:1px solid var(--line);
+ color:#f6d4e1;
+ font-size:13px;
+}
+
+/* MODAL */
+
+.modal{
+ position:fixed;
+ inset:0;
+ z-index:1000;
+ display:none;
+ align-items:center;
+ justify-content:center;
+ padding:18px;
+ background:#000b;
+ backdrop-filter:blur(7px);
+}
+
+.modal.show{display:flex}
+
+.modalBox{
+ width:min(500px,100%);
+ padding:28px 22px;
+ text-align:center;
+ border-radius:28px;
+ border:1px solid #ff9fca66;
+ background:linear-gradient(145deg,#3b0d27,#15050d);
+ box-shadow:0 30px 100px #000;
+ animation:pop .3s ease;
+}
+
+.modalBox h2{
+ font-size:27px;
+ margin-top:0;
+}
+
+.modalText{
+ color:#ead1dc;
+ line-height:1.8;
+}
+
+/* TOAST */
+
+.toast{
+ position:fixed;
+ left:50%;
+ bottom:22px;
+ transform:translate(-50%,120px);
+ z-index:2000;
+ padding:12px 18px;
+ border-radius:999px;
+ background:#230a18eF;
+ border:1px solid #ff9fca55;
+ box-shadow:0 15px 40px #0009;
+ transition:.35s;
+ white-space:nowrap;
+ max-width:90%;
+ overflow:hidden;
+ text-overflow:ellipsis;
+}
+
+.toast.show{transform:translate(-50%,0)}
+
+/* FLOATING */
+
+.floatHeart{
+ position:fixed;
+ pointer-events:none;
+ z-index:900;
+ animation:heartFloat 3.2s linear forwards;
+}
+
+.confetti{
+ position:fixed;
+ pointer-events:none;
+ z-index:999;
+ animation:confettiFall 2s ease-out forwards;
+}
+
+/* ANIMATIONS */
+
+@keyframes float{
+ 0%,100%{transform:translateY(0) rotate(-3deg)}
+ 50%{transform:translateY(-13px) rotate(3deg)}
+}
+
+@keyframes shine{
+ 0%{background-position:0%}
+ 100%{background-position:300%}
+}
+
+@keyframes panelIn{
+ from{opacity:0;transform:translateY(15px)}
+ to{opacity:1;transform:translateY(0)}
+}
+
+@keyframes pop{
+ from{opacity:0;transform:scale(.85)}
+ to{opacity:1;transform:scale(1)}
+}
+
+@keyframes heartFloat{
+ from{transform:translateY(0) scale(.6);opacity:0}
+ 15%{opacity:1}
+ to{transform:translateY(-100vh) translateX(var(--x)) scale(1.4);opacity:0}
+}
+
+@keyframes confettiFall{
+ from{transform:translateY(-20px) rotate(0);opacity:1}
+ to{transform:translateY(100vh) rotate(720deg);opacity:0}
+}
+
+/* MOBILE */
+
+@media(max-width:750px){
+ .games{grid-template-columns:repeat(2,1fr)}
+ .infoGrid{grid-template-columns:1fr}
+ .memoryWall{grid-template-columns:1fr 1fr}
+}
+
+@media(max-width:480px){
+ .app{width:94%}
+ .hero{padding:38px 14px 28px}
+ .hero h1{letter-spacing:-2px}
+ .games{gap:9px}
+ .game{min-height:140px;padding:15px 12px}
+ .gameIcon{font-size:34px}
+ .panel{padding:17px}
+ .topbar{top:5px}
+ .quote{font-size:18px}
+}
+</style>
+</head>
+
+<body>
+
+<div class="app">
+
+<!-- TOP BAR -->
+
+<div class="topbar">
+ <div class="brand">
+  <div class="brandIcon">🌸</div>
+  <div>Maryam's World</div>
+ </div>
+
+ <div class="controls">
+  <button class="iconBtn" id="soundBtn" onclick="toggleSound()">🔊</button>
+  <button class="iconBtn" onclick="changeTheme()">🎨</button>
+ </div>
+</div>
+
+<!-- HERO -->
+
+<section class="hero">
+
+ <div class="heroFlower">🌸</div>
+
+ <h1>Maryam</h1>
+
+ <div class="tag">
+  Welcome to your little pink world ✨<br>
+  یہاں boring ہونے کی اجازت نہیں۔ 😎
+ </div>
+
+ <div class="scorePill">
+  🏆 Friendship Score:
+  <strong id="score">0</strong>
+ </div>
+
+ <div class="level">
+  Level <strong id="level">1</strong> ·
+  <span id="levelText">Friendship Starter</span>
+ </div>
+
+ <div class="progress">
+  <i id="progress"></i>
+ </div>
+
+</section>
+
+
+<!-- GAMES -->
+
+<section class="section">
+
+ <div class="sectionHead">
+  <h2>🎮 Fun Zone</h2>
+  <span>Choose your game</span>
+ </div>
+
+ <div class="games">
+
+  <button class="game" onclick="startQuiz()">
+   <span class="gameIcon">🎯</span>
+   <span class="gameName">Friendship Quiz</span>
+   <span class="gameDesc">دیکھیں friendship knowledge کتنی strong ہے۔</span>
+  </button>
+
+  <button class="game" onclick="openWheel()">
+   <span class="gameIcon">🎡</span>
+   <span class="gameName">Lucky Wheel</span>
+   <span class="gameDesc">گھماؤ اور دیکھو آج کیا surprise ہے۔</span>
+  </button>
+
+  <button class="game" onclick="newChallenge()">
+   <span class="gameIcon">😂</span>
+   <span class="gameName">Funny Challenge</span>
+   <span class="gameDesc">ایک random funny challenge complete کرو۔</span>
+  </button>
+
+  <button class="game" onclick="compliment()">
+   <span class="gameIcon">💬</span>
+   <span class="gameName">Compliment Machine</span>
+   <span class="gameDesc">Machine سے ایک special message لو۔</span>
+  </button>
+
+  <button class="game" onclick="pickOne()">
+   <span class="gameIcon">💗</span>
+   <span class="gameName">Pick One</span>
+   <span class="gameDesc">صرف ایک choose کرنا ہے۔ 😏</span>
+  </button>
+
+  <button class="game" onclick="fortune()">
+   <span class="gameIcon">🔮</span>
+   <span class="gameName">Friendship Fortune</span>
+   <span class="gameDesc">آج کی friendship fortune معلوم کرو۔</span>
+  </button>
+
+  <button class="game" onclick="secretBox()">
+   <span class="gameIcon">🎁</span>
+   <span class="gameName">Secret Box</span>
+   <span class="gameDesc">Secret کے اندر secret ہے۔ 🤫</span>
+  </button>
+
+  <button class="game" onclick="startTap()">
+   <span class="gameIcon">⚡</span>
+   <span class="gameName">Quick Tap</span>
+   <span class="gameDesc">10 seconds میں maximum taps!</span>
+  </button>
+
+  <button class="game" onclick="startMemory()">
+   <span class="gameIcon">🧠</span>
+   <span class="gameName">Memory Match</span>
+   <span class="gameDesc">Hidden cards کے pairs match کرو۔</span>
+  </button>
+
+ </div>
+
+</section>
+
+
+<!-- GAME PANEL -->
+
+<div id="gamePanel" class="panel"></div>
+
+
+<!-- ACHIEVEMENTS -->
+
+<section class="section">
+
+ <div class="sectionHead">
+  <h2>🏆 Friendship Achievements</h2>
+  <span id="achievementCount">0 unlocked</span>
+ </div>
+
+ <div class="infoGrid">
+
+  <div class="infoCard" id="ach1">
+   <div class="infoIcon">🌱</div>
+   <h3>First Step</h3>
+   <p>پہلا game کھیلیں۔</p>
+  </div>
+
+  <div class="infoCard" id="ach2">
+   <div class="infoIcon">🎯</div>
+   <h3>Quiz Star</h3>
+   <p>Quiz میں اچھا score کریں۔</p>
+  </div>
+
+  <div class="infoCard" id="ach3">
+   <div class="infoIcon">👑</div>
+   <h3>Pink Legend</h3>
+   <p>100 Friendship Score حاصل کریں۔</p>
+  </div>
+
+ </div>
+
+</section>
+
+
+<!-- QUOTE -->
+
+<section class="section">
+
+ <div class="sectionHead">
+  <h2>💎 Pink Quote</h2>
+  <span>For Maryam</span>
+ </div>
+
+ <div class="quoteBox">
+
+  <div class="quote" id="quote">
+   “Some people make ordinary days feel special. ✨”
+  </div>
+
+  <button class="primary" onclick="newQuote()">
+   نئی Quote ✨
+  </button>
+
+ </div>
+
+</section>
+
+
+<!-- MEMORY WALL -->
+
+<section class="section">
+
+ <div class="sectionHead">
+  <h2>📸 Memory Wall</h2>
+  <span>Little moments</span>
+ </div>
+
+ <div class="memoryWall">
+
+  <div class="memoryItem">🌸 Good friends make ordinary moments memorable.</div>
+
+  <div class="memoryItem">😂 یہاں laughter کی کوئی limit نہیں۔</div>
+
+  <div class="memoryItem">✨ Small memories, big stories.</div>
+
+  <div class="memoryItem">💗 Good vibes only.</div>
+
+  <div class="memoryItem">🎀 Pink moments deserve a place here.</div>
+
+  <div class="memoryItem">👑 Maryam's VIP friendship zone.</div>
+
+ </div>
+
+</section>
+
+
+<!-- DAILY MESSAGE -->
+
+<section class="section">
+
+ <div class="quoteBox">
+
+  <div style="font-size:42px">🌷</div>
+
+  <h2>Today's Little Message</h2>
+
+  <p style="color:var(--muted);line-height:1.8">
+   Maryam detected — boring mode automatically disabled. 😎
+   <br>
+   Keep smiling, keep laughing, and keep making good memories. ✨
+  </p>
+
+  <button class="primary" onclick="dailyMessage()">
+   Surprise Message 💗
+  </button>
+
+ </div>
+
+</section>
+
+
+<div style="text-align:center;color:#b996a8;font-size:12px;margin-top:35px">
+ Made with friendship, laughter & pink magic 🌸
+</div>
+
+</div>
+
+
+<!-- MODAL -->
+
+<div class="modal" id="modal">
+
+ <div class="modalBox">
+
+  <div id="modalContent"></div>
+
+  <button class="primary" onclick="closeModal()">
+   Continue 💗
+  </button>
+
+ </div>
+
+</div>
+
+
+<div class="toast" id="toast"></div>
+
+
+<script>
+
+/* =====================================================
+   MARYAM'S PINK LUXURY ENGINE
+   ===================================================== */
+
+const $ = id => document.getElementById(id);
+
+let score = Number(localStorage.getItem("maryamScore") || 0);
+let soundOn = localStorage.getItem("maryamSound") !== "off";
+let theme = Number(localStorage.getItem("maryamTheme") || 0);
+
+let audioCtx = null;
+
+
+/* =====================================================
+   SCORE SYSTEM
+   ===================================================== */
+
+function save(){
+ localStorage.setItem("maryamScore",score);
+}
+
+function addScore(points){
+
+ score += points;
+
+ if(score < 0) score=0;
+
+ save();
+ updateUI();
+
+ if(points>0){
+  sound("coin");
+ }
+
+}
+
+function updateUI(){
+
+ $("score").textContent=score;
+
+ let level=Math.floor(score/50)+1;
+
+ $("level").textContent=level;
+
+ let names=[
+  "Friendship Starter",
+  "Good Vibes",
+  "Friendship Pro",
+  "Pink Expert",
+  "Friendship Queen",
+  "Maryam's Legend"
+ ];
+
+ $("levelText").textContent=
+  names[Math.min(level-1,names.length-1)];
+
+ let progress=score%50;
+
+ $("progress").style.width=
+  (progress/50*100)+"%";
+
+ let unlocked=0;
+
+ if(score>=1){
+  unlocked++;
+  $("ach1").style.borderColor="#ff9fca66";
+ }
+
+ if(score>=30){
+  unlocked++;
+  $("ach2").style.borderColor="#ff9fca66";
+ }
+
+ if(score>=100){
+  unlocked++;
+  $("ach3").style.borderColor="#ffd47799";
+ }
+
+ $("achievementCount").textContent=
+  unlocked+" unlocked";
+
+}
+
+updateUI();
+
+
+/* =====================================================
+   SOUND ENGINE
+   ===================================================== */
+
+function getAudio(){
+
+ if(!soundOn)return null;
+
+ try{
+
+  if(!audioCtx){
+   audioCtx=new(window.AudioContext||window.webkitAudioContext)();
+  }
+
+  if(audioCtx.state==="suspended"){
+   audioCtx.resume();
+  }
+
+  return audioCtx;
+
+ }catch(e){
+  return null;
+ }
+}
+
+function tone(freq,duration,type="sine",volume=.045){
+
+ const ctx=getAudio();
+
+ if(!ctx)return;
+
+ const osc=ctx.createOscillator();
+ const gain=ctx.createGain();
+
+ osc.type=type;
+ osc.frequency.value=freq;
+
+ gain.gain.setValueAtTime(volume,ctx.currentTime);
+ gain.gain.exponentialRampToValueAtTime(
+  .001,
+  ctx.currentTime+duration
+ );
+
+ osc.connect(gain);
+ gain.connect(ctx.destination);
+
+ osc.start();
+ osc.stop(ctx.currentTime+duration);
+}
+
+function sound(kind){
+
+ if(!soundOn)return;
+
+ if(kind==="click"){
+  tone(520,.06,"sine",.035);
+ }
+
+ if(kind==="coin"){
+  tone(700,.08,"sine",.04);
+  setTimeout(()=>tone(950,.12,"sine",.04),70);
+ }
+
+ if(kind==="win"){
+  tone(523,.12);
+  setTimeout(()=>tone(659,.12),100);
+  setTimeout(()=>tone(784,.18),200);
+ }
+
+ if(kind==="wrong"){
+  tone(180,.18,"sawtooth",.025);
+ }
+
+ if(kind==="flip"){
+  tone(400,.05,"triangle",.025);
+ }
+}
+
+function toggleSound(){
+
+ soundOn=!soundOn;
+
+ localStorage.setItem(
+  "maryamSound",
+  soundOn?"on":"off"
+ );
+
+ $("soundBtn").textContent=
+  soundOn?"🔊":"🔇";
+
+ if(soundOn) sound("click");
+
+ toast(
+  soundOn?
+  "Sound effects ON 🔊":
+  "Sound effects OFF 🔇"
+ );
+}
+
+
+/* =====================================================
+   THEME
+   ===================================================== */
+
+const themes=[
+ {
+  pink:"#ff4f9a",
+  pink2:"#d71970",
+  rose:"#ff9fca"
+ },
+ {
+  pink:"#d95cff",
+  pink2:"#7c20b9",
+  rose:"#dda0ff"
+ },
+ {
+  pink:"#ff6f61",
+  pink2:"#c93442",
+  rose:"#ffaaa3"
+ }
+];
+
+function changeTheme(){
+
+ theme=(theme+1)%themes.length;
+
+ let t=themes[theme];
+
+ document.documentElement.style.setProperty("--pink",t.pink);
+ document.documentElement.style.setProperty("--pink2",t.pink2);
+ document.documentElement.style.setProperty("--rose",t.rose);
+
+ localStorage.setItem("maryamTheme",theme);
+
+ toast("Theme changed ✨");
+ sound("click");
+}
+
+
+/* =====================================================
+   GAME PANEL
+   ===================================================== */
+
+function openPanel(html){
+
+ $("gamePanel").innerHTML=html;
+ $("gamePanel").classList.add("active");
+
+ setTimeout(()=>{
+  $("gamePanel").scrollIntoView({
+   behavior:"smooth",
+   block:"center"
+  });
+ },50);
+}
+
+function closePanel(){
+
+ $("gamePanel").classList.remove("active");
+}
+
+function panelHeader(title){
+
+ return `
+ <div class="panelTop">
+  <h2>${title}</h2>
+  <button class="close" onclick="closePanel()">✕</button>
+ </div>
+ `;
+}
+
+
+/* =====================================================
+   QUIZ
+   ===================================================== */
+
+const quiz=[
+ {
+  q:"اچھی friendship کی سب سے important چیز کیا ہے؟",
+  options:["Trust 🤝","Drama 🎭","صرف selfies 📸"],
+  answer:0
+ },
+ {
+  q:"اگر friend کا mood خراب ہو تو؟",
+  options:["ہنسانا 😂","Ignore کرنا 😶","مزید تنگ کرنا 😈"],
+  answer:0
+ },
+ {
+  q:"Best friendship میں کیا ہونا چاہیے؟",
+  options:["Good vibes ✨","روزانہ fight","صرف online status"],
+  answer:0
+ },
+ {
+  q:"ایک اچھی memory کس چیز سے بنتی ہے؟",
+  options:["Fun + laughter 🌸","صرف expensive چیزوں سے","صرف photos سے"],
+  answer:0
+ },
+ {
+  q:"Maryam's Pink World میں boring mode؟",
+  options:["OFF 😎","ON 😴","Maybe 🤔"],
+  answer:0
+ }
+];
+
+let quizIndex=0;
+let quizPoints=0;
+
+function startQuiz(){
+
+ quizIndex=0;
+ quizPoints=0;
+
+ renderQuiz();
+}
+
+function renderQuiz(){
+
+ if(quizIndex>=quiz.length){
+
+  let percent=Math.round(
+   quizPoints/quiz.length*100
+  );
+
+  if(percent>=80){
+
+   addScore(30);
+   confetti();
+   sound("win");
+
+   openPanel(
+    panelHeader("🎯 Quiz Complete!")+
+    `
+    <div class="challengeBox">
+     <div class="bigEmoji">🏆</div>
+     <h2>Friendship Expert!</h2>
+     <p>Score: ${percent}%</p>
+     <p>تم نے friendship test میں زبردست performance دی!</p>
+     <button class="primary" onclick="startQuiz()">Again 🔄</button>
+    </div>
+    `
+   );
+
+  }else{
+
+   addScore(10);
+
+   openPanel(
+    panelHeader("🎯 Quiz Complete!")+
+    `
+    <div class="challengeBox">
+     <div class="bigEmoji">🌸</div>
+     <h2>Good Try!</h2>
+     <p>Score: ${percent}%</p>
+     <p>ایک بار اور کوشش کرو۔ 😄</p>
+     <button class="primary" onclick="startQuiz()">Try Again 🔄</button>
+    </div>
+    `
+   );
+  }
+
+  return;
+ }
+
+ let item=quiz[quizIndex];
+
+ let html=
+  panelHeader("🎯 Friendship Quiz")+
+  `
+  <div style="color:var(--muted)">
+   Question ${quizIndex+1} / ${quiz.length}
+  </div>
+
+  <div class="question">${item.q}</div>
+
+  <div class="answers">
+  `;
+
+ item.options.forEach((x,i)=>{
+
+  html+=`
+   <button class="answer"
+    onclick="answerQuiz(${i})">
+    ${x}
+   </button>
+  `;
+
+ });
+
+ html+=`</div>`;
+
+ openPanel(html);
+}
+
+function answerQuiz(i){
+
+ if(i===quiz[quizIndex].answer){
+
+  quizPoints++;
+  addScore(7);
+  sound("win");
+
+  toast("Correct! 🎉");
+
+ }else{
+
+  sound("wrong");
+  toast("Oops! 😄");
+
+ }
+
+ quizIndex++;
+
+ setTimeout(renderQuiz,350);
+}
+
+
+/* =====================================================
+   LUCKY WHEEL
+   ===================================================== */
+
+let wheelBusy=false;
+
+function openWheel(){
+
+ openPanel(
+  panelHeader("🎡 Lucky Wheel")+
+  `
+  <div class="wheelWrap">
+
+   <div class="pointer"></div>
+
+   <div class="wheel" id="wheel"></div>
+
+   <p id="wheelText" style="color:var(--muted)">
+    Spin the wheel ✨
+   </p>
+
+   <button class="primary"
+    onclick="spinWheel()">
+    SPIN 🎡
+   </button>
+
+  </div>
+  `
+ );
+}
+
+function spinWheel(){
+
+ if(wheelBusy)return;
+
+ wheelBusy=true;
+
+ const wheel=$("wheel");
+
+ let rotation=
+  1800+
+  Math.floor(Math.random()*1800);
+
+ wheel.style.transform=
+  `rotate(${rotation}deg)`;
+
+ sound("click");
+
+ setTimeout(()=>{
+
+  const results=[
+   "🌸 آج صرف اچھی vibes!",
+   "😂 آج ایک funny moment ضرور ہوگا۔",
+   "👑 Friendship Queen energy!",
+   "✨ آج کوئی اچھی memory بناؤ۔",
+   "💗 Smile — it suits you!",
+   "🎁 Surprise mood unlocked!",
+   "😎 Boring mode OFF!",
+   "🌷 Keep shining!"
+  ];
+
+  const r=
+   results[Math.floor(Math.random()*results.length)];
+
+  $("wheelText").innerHTML=
+   `<strong style="font-size:18px">${r}</strong>`;
+
+  addScore(12);
+  confetti();
+  sound("win");
+
+  wheelBusy=false;
+
+ },3400);
+}
+
+
+/* =====================================================
+   FUNNY CHALLENGE
+   ===================================================== */
+
+const challenges=[
+ "😂 20 seconds تک بغیر ہنسے serious face رکھو۔",
+ "🤳 اپنی سب سے funny selfie بناؤ۔",
+ "🎭 کسی movie dialogue کو بہت dramatic انداز میں بولو۔",
+ "💃 15 seconds کا random dance کرو۔",
+ "😂 کسی دوست کو صرف emojis میں message کرو۔",
+ "🎤 اپنے favourite song کی ایک لائن گاؤ۔",
+ "😎 آئینے کے سامنے خود کو VIP introduce کرو۔",
+ "🌸 آج کسی ایک person کو unexpected compliment دو۔"
+];
+
+function newChallenge(){
+
+ const c=
+  challenges[Math.floor(Math.random()*challenges.length)];
+
+ openPanel(
+  panelHeader("😂 Funny Challenge")+
+  `
+  <div class="challengeBox">
+
+   <div class="bigEmoji">😂</div>
+
+   <h2>Today's Challenge</h2>
+
+   <p style="font-size:19px;line-height:1.8">
+    ${c}
+   </p>
+
+   <button class="primary"
+    onclick="completeChallenge()">
+    Challenge Complete 🏆
+   </button>
+
+   <button class="secondary"
+    onclick="newChallenge()">
+    New Challenge 🔄
+   </button>
+
+  </div>
+  `
+ );
+}
+
+function completeChallenge(){
+
+ addScore(20);
+ confetti();
+ sound("win");
+
+ toast("+20 Friendship Score 🏆");
+}
+
+
+/* =====================================================
+   COMPLIMENT MACHINE
+   ===================================================== */
+
+const compliments=[
+ "Maryam, تمہاری smile کا اپنا ہی vibe ہے۔ 🌸",
+ "Officially: premium friendship energy detected. 👑",
+ "تم boring دن کو بھی interesting بنا سکتی ہو۔ ✨",
+ "Good friendship = good vibes + unlimited laughter. 😂",
+ "تمہاری positive energy واقعی الگ ہے۔ 🌷",
+ "Maryam detected — boring mode automatically disabled. 😎",
+ "Some people simply make memories better. 💗",
+ "Today's reminder: keep smiling. ✨"
+];
+
+function compliment(){
+
+ let c=
+  compliments[
+   Math.floor(Math.random()*compliments.length)
+  ];
+
+ openPanel(
+  panelHeader("💬 Compliment Machine")+
+  `
+  <div class="quoteBox">
+
+   <div style="font-size:50px">💗</div>
+
+   <div class="quote">
+    “${c}”
+   </div>
+
+   <button class="primary"
+    onclick="compliment()">
+    Another One ✨
+   </button>
+
+  </div>
+  `
+ );
+
+ addScore(5);
+ sound("coin");
+}
+
+
+/* =====================================================
+   PICK ONE
+   ===================================================== */
+
+const picks=[
+ ["🍕 Pizza","🍔 Burger"],
+ ["🌙 Night","☀️ Morning"],
+ ["😂 Memes","🎬 Movies"],
+ ["🍫 Chocolate","🍦 Ice Cream"],
+ ["🎮 Games","📸 Photos"],
+ ["🌸 Pink","💜 Purple"],
+ ["🏖️ Beach","🏔️ Mountains"],
+ ["☕ Coffee","🧋Cold Drink"]
+];
+
+let currentPick=null;
+
+function pickOne(){
+
+ currentPick=
+  picks[Math.floor(Math.random()*picks.length)];
+
+ openPanel(
+  panelHeader("💗 Pick One")+
+  `
+  <div class="challengeBox">
+
+   <p style="color:var(--muted)">
+    سوچے بغیر ایک choose کرو 😏
+   </p>
+
+   <div class="pickGrid">
+
+    <button class="pick"
+     onclick="pickResult(0)">
+     ${currentPick[0]}
+    </button>
+
+    <button class="pick"
+     onclick="pickResult(1)">
+     ${currentPick[1]}
+    </button>
+
+   </div>
+
+  </div>
+  `
+ );
+}
+
+function pickResult(i){
+
+ addScore(5);
+
+ openModal(
+  `
+  <div style="font-size:50
